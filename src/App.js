@@ -5,8 +5,11 @@ function App() {
   return (
     <>
       <main className='container'>
-        
+        <StarRating/>
       </main>
+      <footer>
+        <Dialog/>
+      </footer>
     </>
   );
 }

@@ -17,3 +17,11 @@ body {
 .flex {
   display: flex;
 }
+
+.rating {
+  justify-content: center;
+}
+
+.dialog {
+  justify-self: right;
+}
