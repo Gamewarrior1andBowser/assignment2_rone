@@ -25,6 +25,8 @@ footer {
 
 .FaStar {
   color: #555;
+  margin: 2px;
+  font-size: 32px;
   cursor: pointer;
 }
 
