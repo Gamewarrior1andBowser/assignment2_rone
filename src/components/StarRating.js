@@ -12,23 +12,23 @@ function text(rating) {
   }
 }
 
-function isLit(id) {
-  if (id <= rating) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function light(id) {
-  setRating(id);
-  text(rating);
-}
-
 function StarRating() {
   const stars = [{id: 1}, {id: 2}, 
   {id: 3}, {id: 4}, {id: 5}];
   const[rating, setRating] = useState(0);
+
+  const isLit = () => {
+    if (this.id <= rating) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  const light = () => {
+    setRating(this.id);
+    text(rating);
+  }
 
   return (
     <section className="rating">
