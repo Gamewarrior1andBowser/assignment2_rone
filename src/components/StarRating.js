@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Star from "./Star";
 
 function text(rating) {
   switch(rating) {
-    case 0: return "Please leave a rating";
     case 1: return "Utter garbage";
     case 2: return "Kinda Bad";
     case 3: return "Sorta Decent";
     case 4: return "Kinda Good";
     case 5: return "Very great";
+    default: return "Please leave a rating";
   }
 }
 
@@ -18,24 +18,24 @@ function StarRating() {
   const[rating, setRating] = useState(0);
 
   const isLit = () => {
-    if (this.id <= rating) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.id <= rating ? true: false;
   }
-
   const light = () => {
     setRating(this.id);
-    text(rating);
   }
+
+  useEffect(() => {
+    text(rating);
+  })
 
   return (
     <section className="rating">
       <h2>{text(rating)}</h2>
-      {stars.map((star) => (
+      <div className="flex">
+        {stars.map((star) => (
         <Star id={star.id} isLit={isLit} light={light}/>
       ))}
+      </div>
     </section>
   );
 }

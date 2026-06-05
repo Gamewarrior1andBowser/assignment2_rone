@@ -16,9 +16,6 @@ body {
 
 .flex {
   display: flex;
-}
-
-.rating {
   justify-content: center;
 }
 
@@ -27,7 +24,8 @@ body {
 }
 
 .FaStar {
-  color: #555
+  color: #555;
+  cursor: pointer;
 }
 
 .yellow {

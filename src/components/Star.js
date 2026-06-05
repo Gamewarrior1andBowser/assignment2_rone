@@ -1,7 +1,8 @@
 import {FaStar} from "react-icons/fa";
 
 function Star(props) {
-  if (props.isLit) {
+  let test = props.isLit;
+  if (test) {
     return (
       <p className="FaStar yellow" onClick={props.light}><FaStar/></p>
     );
