@@ -25,3 +25,11 @@ body {
 .dialog {
   justify-self: right;
 }
+
+.FaStar {
+  color: #555
+}
+
+.yellow {
+  color: #ff0;
+}

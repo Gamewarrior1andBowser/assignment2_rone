@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Star from "./Star";
 
 function text(rating) {
@@ -11,13 +12,30 @@ function text(rating) {
   }
 }
 
+function isLit(id) {
+  if (id <= rating) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function light(id) {
+  setRating(id);
+  text(rating);
+}
+
 function StarRating() {
-  let rating = 0;
+  const stars = [{id: 1}, {id: 2}, 
+  {id: 3}, {id: 4}, {id: 5}];
+  const[rating, setRating] = useState(0);
 
   return (
     <section className="rating">
-      
       <h2>{text(rating)}</h2>
+      {stars.map((star) => (
+        <Star id={star.id} isLit={isLit} light={light}/>
+      ))}
     </section>
   );
 }
