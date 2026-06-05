@@ -11,16 +11,19 @@ body {
 }
 
 #root, main {
-  height: min(95svh);
+  height: min(56svh);
+}
+
+footer {
+  height: min(43svh);
 }
 
 .flex {
   display: flex;
-  justify-content: center;
 }
 
-footer {
-  justify-self: right;
+.center {
+  justify-content: center;
 }
 
 .FaStar {
@@ -30,14 +33,23 @@ footer {
   cursor: pointer;
 }
 
+.rating {
+  margin-top: 40svh;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
 .yellow {
   color: #ff0;
 }
 
 button {
   border-radius: 15px;
-  padding: 5px;
+  padding: 10px;
   margin-right: 6px;
+  height: 5svh;
   color: #fff;
   background-color: #0000ff;
   border: 1px #00008b solid;
@@ -47,4 +59,16 @@ button {
 button:hover {
   background-color: #00008b;
   border: 1px #000047 solid;
+}
+
+footer div {
+  justify-content: flex-end;
+}
+
+footer div button {
+  margin-top: 36svh;
+}
+
+.hidden {
+  visibility: hidden;
 }

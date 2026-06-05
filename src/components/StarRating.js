@@ -13,7 +13,7 @@ function StarRating() {
     case 3: return "Sorta Decent";
     case 4: return "Kinda Good";
     case 5: return "Very great";
-    default: return "Please leave a rating";
+    default: return "";
   }}
 
   const light = () => {
@@ -21,14 +21,14 @@ function StarRating() {
   }
 
   return (
-    <section className="rating">
-      <h2>{text(rating)}</h2>
-      <div className="flex">
+    <section>
+      <div className="flex center">
         {stars.map((star) => (
         <Star id={star.id} setRating={setRating} 
         rating={rating} text={text}/>
       ))}
       </div>
+      <h2>{text(rating)}</h2>
     </section>
   );
 }

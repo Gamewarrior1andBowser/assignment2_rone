@@ -2,21 +2,18 @@ import { useState } from "react";
 
 function Dialog(props) {
   const[isHidden, setHidden] = useState(true);
-
-  if (props.popup) {
-    return (
-      <>
+  return (
+    <footer >
+      <div className={isHidden ? "hidden popup" : "popup"}>
         <p>temp text</p>
-      </>
-    );
-  } else {
-    return (
-        <footer>
-          <button onClick={() => {setHidden(!isHidden)}}>Open Dialog</button>
-        </footer>
-    );
-  }
-  
+      </div>
+      <div className="flex">
+        <button onClick={() => {setHidden(!isHidden)}}>
+      {isHidden ? "Open Dialog" : "Close Dialog"}</button>
+      </div>
+      
+    </footer>
+  );
 }
 
 export default Dialog;
