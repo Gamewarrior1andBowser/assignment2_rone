@@ -1,11 +1,12 @@
 import { useState } from "react";
+import image from '../img/logo192.png';
 
 function Dialog(props) {
   const[isHidden, setHidden] = useState(true);
   return (
-    <footer >
-      <div className={isHidden ? "hidden popup" : "popup"}>
-        <p>temp text</p>
+    <footer className="container">
+      <div className={isHidden ? "hidden popup flex" : "popup flex"}>
+        <img src={image} alt="Uh-oh!" title="Easter Egg"></img>
       </div>
       <div className="flex">
         <button onClick={() => {setHidden(!isHidden)}}>
