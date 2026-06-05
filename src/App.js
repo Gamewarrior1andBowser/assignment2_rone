@@ -6,10 +6,9 @@ function App() {
     <>
       <main className='container flex'>
         <StarRating/>
+        <Dialog popup={true}/>
       </main>
-      <footer>
-        <Dialog/>
-      </footer>
+      <Dialog popup={false}/>
     </>
   );
 }

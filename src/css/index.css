@@ -11,7 +11,7 @@ body {
 }
 
 #root, main {
-  height: min(100svh);
+  height: min(95svh);
 }
 
 .flex {
@@ -19,7 +19,7 @@ body {
   justify-content: center;
 }
 
-.dialog {
+footer {
   justify-self: right;
 }
 
@@ -30,4 +30,19 @@ body {
 
 .yellow {
   color: #ff0;
+}
+
+button {
+  border-radius: 15px;
+  padding: 5px;
+  margin-right: 6px;
+  color: #fff;
+  background-color: #0000ff;
+  border: 1px #00008b solid;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: #00008b;
+  border: 1px #000047 solid;
 }
